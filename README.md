@@ -23,10 +23,10 @@ To download the script, and set up everything you need to:
 3. Use ```chmod +x ./setup.sh``` to mark the setup script as executable.
 4. Run ```./setup.sh``` to automatically download and install Cheat Engine to your current Wine prefix.
 
-*Note: If the setup script doesn't already chmod [CE.sh], then you can just run Step 3 of the setup process but with that file instead.*
+*Note: If the setup script doesn't already chmod [CE.sh](CE.sh), then you can just run Step 3 of the setup process but with that file instead.*
 
 ## Configuration
-1. Edit [CE.sh] with a text editor such as Nano, Vim, Kate, or anything else.
+1. Edit [CE.sh](CE.sh) with a text editor such as Nano, Vim, Kate, or anything else.
 2. Change the ```prefixInstall``` parameter to the Steam library folder where the game is installed (By default, this is "/home/$USER/.steam/Steam").
 3. Change the ```STEAMAPPID``` parameter to the desired Steam game.
 4. Change the ```PROTONVERSIONNAME``` to the Proton version used by the game (The exact naming for the version can be found as the name of the folder in *"/home/$USER/.steam/Steam/SteamApps/Common"*), and change the ```PROTONSUBDIRECTORYNAME``` to the folder inside of said Proton directory that leads to a "bin" folder containing an executable named *"wine"* (By default, this is already set for Proton's Experimental version which uses a *"files"* directory instead of *"dist"* which is used by Proton 3.7).
@@ -34,7 +34,7 @@ To download the script, and set up everything you need to:
 *Note: More notes are provided in the file which gives more detail about certain parameters.*
 
 ## Usage
-1. Simply launch [CE.sh] by using ```./CE.sh``` in a terminal.
+1. Simply launch [CE.sh](CE.sh) by using ```./CE.sh``` in a terminal.
 
 *Note: Only do this after launching the game through Proton for the first time, as the speed of this setup and the directories assume that it has already gone through the initial setup phase.*
 
