@@ -13,6 +13,8 @@ I put this together after some looking around for some insights on how such a th
 
 * X11 (X Window System) (This is enabled for NVIDIA GPUs with propreitary drivers by default)
 
+* xdotool installed ([See here](https://github.com/jordansissel/xdotool) for more information.)
+
 *Note: While NVIDIA GPUs with propreitary drivers through X11 have been tested with this script, compatibility with AMD/Intel GPUs through Wayland can't be guaranteed.*
 
 ## Setup
