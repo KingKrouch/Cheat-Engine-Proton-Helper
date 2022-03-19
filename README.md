@@ -2,12 +2,12 @@
 
 This Bash Script allows running Cheat Engine with Steam games running in Proton.
 
-Based on a script from [Luetti from the Cheat Engine forums](https://www.cheatengine.org/forum/viewtopic.php?t=584042&sid=63a0518c8066bfea7b97ca3855f0640f), modified for Steam Proton games by your's truly (KingKrouch).
+Based on a script from [Luetti from the Cheat Engine forums](https://www.cheatengine.org/forum/viewtopic.php?t=584042&sid=63a0518c8066bfea7b97ca3855f0640f), modified for Steam Proton games.
 
-I put this together after some looking around for some insights on how such a thing could be done, because after switching from Windows, I needed to continue work in a way that would give me correct memory offsets for both Windows and Linux, since I work on game mods pertaining to fixing PC port related issues. The problem is that all of the Linux alternatives to Cheat Engine suck (and lack the features that I needed), and because both those and the CEServer method have completely different memory offsets that would make mod development difficult. The method of launching Cheat Engine through Steamtinkerlaunch [has been broken for a while](https://github.com/frostworx/steamtinkerlaunch/wiki/Cheat-Engine), and I needed to get a better way of doing this stuff siutuated.
+I put this together after some looking around for some insights on how such a thing could be done, since switching from Windows, I needed to continue work in a way that would give me consistently correct memory offsets for both running natively in Windows and Proton. The problem is that all of the Linux alternatives to Cheat Engine are barebones (and lack the features that I needed), and because both those and the CEServer method have completely different memory offsets that would make mod development in a platform agnostic standard difficult.
 
 ## Prerequisites
-* 64-Bit Wine (Instructions for [Arch Linux](https://wiki.archlinux.org/title/wine#Installation) and [Ubuntu](https://vitux.com/how-to-install-wine-on-ubuntu/) here.)
+* 64-Bit Wine (Instructions for [Arch Linux](https://wiki.archlinux.org/title/wine#Installation), [Fedora](https://computingforgeeks.com/how-to-install-wine-on-fedora/) and [Ubuntu](https://vitux.com/how-to-install-wine-on-ubuntu/) here.)
 
 * Steam with Proton installed
 
@@ -37,7 +37,7 @@ To download the script, and set up everything you need to:
 ## Usage
 1. Simply launch [CE.sh](CE.sh) by using ```./CE.sh``` in a terminal.
 
-*Note: Only do this after launching the game through Proton for the first time, as the speed of this setup and the directories assume that it has already gone through the initial setup phase.*
+*Note: Only do this after launching the game through Proton for the first time, as this script assumes it has already gone through the initial setup phase.*
 
 ## License
-Do whatever you want with it, assuming you don't remove any crediting or sell it.
+[See the Unlicense for more details.](https://github.com/KingKrouch/Cheat-Engine-Proton-Helper/blob/master/LICENSE)
