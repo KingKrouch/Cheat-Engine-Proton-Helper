@@ -30,7 +30,6 @@ To download the script, and set up everything you need to:
 ## Configuration
 1. Edit [CE.sh](CE.sh) with a text editor such as Nano, Vim, Kate, or anything else.
 2. Change the ```prefixInstall``` parameter to the Steam library folder where the game is installed (By default, this is "/home/$USER/.steam/Steam").
-3. Change the ```STEAMAPPID``` parameter to the desired Steam game.
 4. Change the ```PROTONVERSIONNAME``` to the Proton version used by the game (The exact naming for the version can be found as the name of the folder in *"/home/$USER/.steam/Steam/SteamApps/Common"*), and change the ```PROTONSUBDIRECTORYNAME``` to the folder inside of said Proton directory that leads to a "bin" folder containing an executable named *"wine"* (By default, this is already set for Proton's Experimental version which uses a *"files"* directory instead of *"dist"* which is used by Proton 3.7).
 
 *Note: More notes are provided in the file which gives more detail about certain parameters.*
