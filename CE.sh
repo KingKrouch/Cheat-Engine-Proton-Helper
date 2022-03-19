@@ -11,8 +11,8 @@
 
 ## Config: ##
 ##
-# Here's where you should enter the Cheat Engine version that is installed, and the desired Steam AppID you want to use.
-# For this example, Cheat Engine 7.2, the experimental branch of Proton, and Spacewar are being used as examples.
+# Here's where you should enter the Cheat Engine version that is installed.
+# For this example, Cheat Engine 7.4, the experimental branch of Proton are being used as examples.
 # Another example you can use instead of "Proton - Experimental" for the Proton Version name is "Proton 3.7", however, instead of using "files" for the Proton Subdirectory name, you would use "dist" instead.
 CEVersion="7.4"
 PROTONVERSIONNAME="Proton - Experimental"
