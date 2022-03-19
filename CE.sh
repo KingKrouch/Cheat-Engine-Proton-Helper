@@ -14,8 +14,7 @@
 # Here's where you should enter the Cheat Engine version that is installed, and the desired Steam AppID you want to use.
 # For this example, Cheat Engine 7.2, the experimental branch of Proton, and Spacewar are being used as examples.
 # Another example you can use instead of "Proton - Experimental" for the Proton Version name is "Proton 3.7", however, instead of using "files" for the Proton Subdirectory name, you would use "dist" instead.
-CEVersion="7.2"
-STEAMAPPID="480"
+CEVersion="7.4"
 PROTONVERSIONNAME="Proton - Experimental"
 PROTONSUBDIRECTORYNAME="files"
 
@@ -38,6 +37,8 @@ TIMER_WAITTIME=5
 
 
 ## Script Functionality begins here: ##
+
+read -p 'Enter a Steam AppID: ' STEAMAPPID
 
 # Don't mess with these variables, as they are necessary for this script to function.
 TIMES_TRIED=0
@@ -81,7 +82,6 @@ function checkIfGameRunning()
         return
     fi
 }
-
 
 if [ -d "$WINEPREFIX" ]
 then
