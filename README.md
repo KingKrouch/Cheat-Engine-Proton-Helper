@@ -40,4 +40,4 @@ To download the script, and set up everything you need to:
 *Note: Only do this after launching the game through Proton for the first time, as this script assumes it has already gone through the initial setup phase.*
 
 ## License
-[See the Unlicense for more details.](https://github.com/KingKrouch/Cheat-Engine-Proton-Helper/blob/master/LICENSE)
+[See the Unlicense for more details.](https://github.com/KingKrouch/Cheat-Engine-Proton-Helper/blob/main/LICENSE)
