@@ -42,6 +42,7 @@ function failEntry()
 {
     echo $1
     zenity --error \
+    --title="Error" \
     --text="$1"
     return
 }
@@ -53,7 +54,7 @@ function initScript()
     --text="Enter a Steam AppID:" \
     --entry-text "480"
         then export STEAMAPPID="$?"
-        else failEntry $1 "No Steam AppID entered."
+        else failEntry $1 "ERROR: \nNo Steam AppID entered."
     fi
 }
 
@@ -95,7 +96,7 @@ function checkIfGameRunning()
     then
         checkProcess # Checks the process again.
     else
-        failEntry $1 "ERROR # 3: Game did not launch on time. Exiting." # Gives up, as something clearly went wrong.
+        failEntry $1 "ERROR # 3: \nGame did not launch on time. Exiting." # Gives up, as something clearly went wrong.
         sleep 3 # gives the batch script three seconds before returning the function.
         return
     fi
@@ -108,8 +109,8 @@ then
         xdg-open steam://run/$STEAMAPPID # Tells Steam to launch the game
         checkProcess # Starts the process checking function.
     else
-        failEntry $1 "ERROR # 2: Incorrect Proton Directory. Did you set your Steam Install folder, Proton Version Name, or Subdirectory name correctly?"
+        failEntry $1 "ERROR # 2: \nIncorrect Proton Directory. \nDid you set your Steam Install folder, Proton Version Name, or Subdirectory name correctly?"
     fi
 else
-    failEntry $1 "ERROR # 1: Steam Compatdata folder for game being launched doesn't exist. Make sure to run the game in Proton once before running, check if the Proton version is correct, and check if Proton is enabled for the SteamApp in question."
+    failEntry $1 "ERROR # 1: \nSteam Compatdata folder for game being launched doesn't exist. \nMake sure to run the game in Proton once before running, check if the Proton version is correct, and check if Proton is enabled for the SteamApp in question."
 fi
