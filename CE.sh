@@ -28,7 +28,6 @@ steamInstall="/home/$USER/.steam/"
 CEPrefix="/home/$USER/.wine"
 
 # Here's some flags you can tweak, although IIRC, ESync and FSync are required for Cheat Engine to function.
-proton=$2
 export WINEESYNC=1
 export WINEFSYNC=1
 export PROTON_FORCE_LARGE_ADDRESS_AWARE=1
@@ -42,7 +41,6 @@ read -p 'Enter a Steam AppID: ' STEAMAPPID
 
 # Don't mess with these variables, as they are necessary for this script to function.
 TIMES_TRIED=0
-LAUNCHED=0
 
 # Sets the WinePrefix to the Proton prefix for said game.
 export WINEPREFIX="$prefixInstall/steamapps/compatdata/$STEAMAPPID/pfx"
@@ -58,7 +56,6 @@ function checkProcess()
         sleep 10 # Sleeps the rest for ten seconds to let the game have some time to launch.
         # Starts Cheat Engine using the currently used Proton prefix.
         "$steamInstall/steam/steamapps/common/$PROTONVERSIONNAME/$PROTONSUBDIRECTORYNAME/bin/wine" "$CEPrefix/drive_c/Program Files/Cheat Engine $CEVersion/cheatengine-x86_64.exe"
-        $LAUNCHED == 1
     else
         TIMES_TRIED=$(( TIMES_TRIED + 1)) # Adds a try to the amount of tries that have been done.
         if [$TIMES_TRIED = 1]
@@ -68,18 +65,6 @@ function checkProcess()
             echo "Tried $TIMES_TRIED time."
         fi
 
-    fi
-}
-
-function checkIfGameRunning()
-{
-    if (( TIMES_TRIED < 5 )) # Checks if there's less than five tries.
-    then
-        checkProcess # Checks the process again.
-    else
-        echo "ERROR # 3: Game did not launch on time. Exiting." # Gives up, as something clearly went wrong.
-        sleep 3 # gives the batch script three seconds before returning the function.
-        return
     fi
 }
 
